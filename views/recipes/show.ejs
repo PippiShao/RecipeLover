@@ -5,7 +5,14 @@
             <div class="thumbnail">
                 <img src="<%=recipe.image%>" >
                 <div class="caption-full">
-                    <div class="jumbotron" ><%= recipe.description %></div>
+                    <%var recipeList = recipe.description.split("\n") %>
+                    <div class="jumbotron" >
+                        <%for (var i=0;i<recipeList.length;i++) {%>
+                            <%if (recipeList[i].length!=0) {%>
+                            <li><%= recipeList[i]%></li>
+                        <%}%>
+                        <%}%>
+                    </div>
                     <p><em>Submitted By <strong><%= recipe.author.username %></strong> on <%=recipe.date_created%></em></p>
                     <!-- ratings distribution-->
                     <div class="row" id="ratingbar" style="margin-left:0; width:315px;">

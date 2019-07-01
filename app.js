@@ -54,8 +54,7 @@ app.use(methodoverride("_method"));   // new
 app.use(flash());
 //============================================================
 
-seedDB(); //seed the database
-
+// seedDB(); //seed the database
 
 app.use(require("express-session")({
     secret: "my cat is cute",
