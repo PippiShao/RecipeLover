@@ -1,0 +1,29 @@
+<% include ../partials/header %> 
+
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To Recipe Lover!</h1>
+             <p>Share your recipe with the world</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/recipes/new">Add A New Recipe</a>
+             </p>
+         </div>
+     </header>
+
+     <div class="container">
+         <br>
+         <div class="row" style="display:flex; flex-wrap:wrap;">
+             <% for( recipe of recipes ) {%>
+                 <div class="col-md-3 col-sm-6">
+                     <a href="/recipes/<%= recipe._id %>" class="thumbnail">
+                         <img src="<%=recipe.image%>" >
+                         <h4 class="text-center"><%=recipe.name%></h4>
+                     </a>
+                 </div>
+             <% } %>
+         </div>
+     </div>
+</div>
+
+<% include ../partials/footer %>
