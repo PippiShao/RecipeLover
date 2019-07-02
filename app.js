@@ -28,7 +28,7 @@ var commentRoutes    = require("./routes/comments"),
 //Add mongoose and connect our DB
 //============================================================
 // environment variable for database url (safety purpose : to prevent users from deleting others' data )
-var url = process.env.DATABASEURL || 'mongodb://localhost/yelp_camp';
+var url = process.env.DATABASEURL || 'mongodb://127.0.0.1/yelp_camp';
 mongoose.Promise = global.Promise;
 mongoose.set('debug', false);
 // fix deprecation warnings
