@@ -4,9 +4,7 @@ var passport = require("passport");
 var User = require("../models/user");
 var Recipe = require("../models/recipe");
 var middleware = require("../middleware");
-var bcrypt = require('bcrypt-nodejs'),
-    async = require('async'),
-    crypto = require('crypto');
+var bcrypt = require('bcrypt-nodejs');
 var helper = require('sendgrid').mail;
 
 var getRatings=function(req,res) {
