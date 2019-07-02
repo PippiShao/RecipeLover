@@ -84,6 +84,6 @@ app.use("/recipes", recipeRoutes);
 app.use("/recipes/:id/comments", commentRoutes);
 
 
-app.listen(3001, 'localhost', function(){
+app.listen(3001 || process.env.Route, 'localhost', function(){
     console.log("server start");
 });
